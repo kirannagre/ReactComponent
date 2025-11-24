@@ -1,0 +1,16 @@
+props :It is used to pass an information using a component and it pass information from the other point where 
+we call our component.
+
+
+function component:
+
+
+//define  body of function
+function nameoffunction(props){
+    props.name, props.age,props.height//example
+}
+
+
+calling functional component(main.jsx)->pass information to component.
+
+<MapExample name="Kiran" age=21  />
