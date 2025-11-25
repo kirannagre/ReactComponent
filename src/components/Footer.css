@@ -1,0 +1,21 @@
+ul li a{
+    text-decoration: none;
+        color: white;
+}
+ 
+ul li{
+    display: inline;
+    margin-left: 8px;
+    color: white;
+}
+
+ul{
+    margin-left: 680px;
+}
+
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
