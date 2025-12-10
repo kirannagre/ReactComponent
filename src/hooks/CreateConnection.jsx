@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CreateConnection = (serverUrl,roomId) => {
+const CreateConnection = (username,tokenId) => {
   return {
     connect() {
-      console.log('Connecting to "' + roomId + '" room at ' + serverUrl + '...');
+      console.log('Connecting to "' + tokenId + '"  Username' + username+ '...');
     },
     disconnect() {
-      console.log(' Disconnected from "' + roomId + '" room at ' + serverUrl);
+      console.log(' Disconnected from "' + tokenId + '" username : ' + username);
     }
   };
 }

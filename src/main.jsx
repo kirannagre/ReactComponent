@@ -17,6 +17,7 @@ import PassingFunctionExample from './components/Events/PassingFunctionExample.j
 import ThemeSelection from './components/Events/ThemeSelection.jsx'
 import ContactForm from './components/Events/ContactForm.jsx'
 import UseEffectExample from './hooks/UseEffectExample';
+import UseEffectExample2 from './hooks/UseEffectExample2.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -28,12 +29,13 @@ createRoot(document.getElementById('root')).render(
     <ConditionalRender/> */}
     {/* <ListExample/> */}
     {/* <EventExample/> */}
-    {/* <UseStateExample/> */}
+    {/* <UseStateExample/>} 
     {/* <OnclickExample/> */}
     {/* <OnchangeExample/> */}
     {/* <PassingFunctionExample/> */}
     {/* <ThemeSelection/> */}
     {/* <ContactForm/> */}
-    <UseEffectExample/>
+    {/*<UseEffectExample*/}
+   <UseEffectExample2/>
   </StrictMode>,
 )
