@@ -6,6 +6,7 @@ import FeaturesExample from './pages/FeaturesExample'
 import PageNotFound from './pages/PageNotFound'
 import Header from './pages/Header'
 import Footer from './components/Footer'
+import UseNavigateExample from './hooks/UseNavigateExample'
 
 function App() {
 
@@ -19,9 +20,27 @@ function App() {
     <Route path="/hero" element={<Hero/>}/>
     <Route path="*" element={<PageNotFound/>}/>
         </Routes>
-        <Footer/>
+        
+        {/* <Footer/> */}
+        <UseNavigateExample/>
       </BrowserRouter>
   )
 }
 
 export default App
+
+
+// import AppRoutes from "./routes/AppRoutes";
+// import { AuthProvider } from "./context/AuthContext";
+
+// function App() {
+//   return (
+//     <AuthProvider>
+//       <AppRoutes />
+//     </AuthProvider>
+//   );
+// }
+
+// export default App;
+
+

@@ -18,6 +18,8 @@ import ThemeSelection from './components/Events/ThemeSelection.jsx'
 import ContactForm from './components/Events/ContactForm.jsx'
 import UseEffectExample from './hooks/UseEffectExample';
 import UseEffectExample2 from './hooks/UseEffectExample2.jsx'
+import UseNavigateExample from './hooks/UseNavigateExample.jsx'
+import UseContextExample from './hooks/UseContextExample.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -35,7 +37,9 @@ createRoot(document.getElementById('root')).render(
     {/* <PassingFunctionExample/> */}
     {/* <ThemeSelection/> */}
     {/* <ContactForm/> */}
-    {/*<UseEffectExample*/}
-   <UseEffectExample2/>
+    {/* <UseEffectExample2/> */}
+   {/* <App/> */}
+   {/* <App/> */}
+   <UseContextExample/>
   </StrictMode>,
 )

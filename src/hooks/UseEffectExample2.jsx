@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MapExample from "./MapExample.jsx";
 
 const UseEffectExample2 = () => {
-  const [zoomLevel, setZoomLevel] = useState(0);
+  const [zoomLevel, setZoomLevel] = useState(4);
 
   return (
     <div>

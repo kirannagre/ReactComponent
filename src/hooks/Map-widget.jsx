@@ -1,5 +1,5 @@
 import * as L from "leaflet";
-/* index.css */
+//  index.css 
 
 export class MapWidget {
     constructor(domNode) {
