@@ -20,6 +20,9 @@ import UseEffectExample from './hooks/UseEffectExample';
 import UseEffectExample2 from './hooks/UseEffectExample2.jsx'
 import UseNavigateExample from './hooks/UseNavigateExample.jsx'
 import UseContextExample from './hooks/UseContextExample.jsx'
+import { UseContextExample2 } from './hooks/UseContextExample2.jsx'
+import ThemeComponent from './hooks/ThemeComponent.jsx'
+import UseRefExample from './hooks/UseRefExample';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -38,8 +41,11 @@ createRoot(document.getElementById('root')).render(
     {/* <ThemeSelection/> */}
     {/* <ContactForm/> */}
     {/* <UseEffectExample2/> */}
-   {/* <App/> */}
-   {/* <App/> */}
-   <UseContextExample/>
+     <App/>
+   
+   {/* <UseContextExample2/> */}
+   {/* <ThemeComponent/> */}
+   {/* <UseContextExample/> */}
+  {/* <UseRefExample/> */}
   </StrictMode>,
 )
