@@ -9,7 +9,35 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx">
+const input = document.getElementById('inputString');
+    const resultList = document.getElementById('result');
 
+    function countCharacters(str) {
+      const frequency = {};
+      for (let char of str) {
+        if (frequency[char]) {
+          frequency[char] += 1;
+        } else {
+          frequency[char] = 1;
+        }
+      }
+      return frequency;
+    }
+
+    input.addEventListener('input', () => {
+      const str = input.value;
+      const freq = countCharacters(str);
+
+      // Clear previous results
+      resultList.innerHTML = '';
+
+      // Display new frequency
+      for (const [char, count] of Object.entries(freq)) {
+        const li = document.createElement('li');
+        li.textContent = `'${char}' : ${count}`;
+        resultList.appendChild(li);
+      }
+    });
     </script>
   </body>
 </html>
