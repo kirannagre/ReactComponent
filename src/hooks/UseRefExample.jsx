@@ -8,6 +8,11 @@ const UseRefExample = () => {
     counter.current=counter.current + 1
   });
 
+const [count, setCount] = useState(0);
+
+useEffect(() => {
+  setCount((prev) => prev + 1);
+});
 
 
   return (
