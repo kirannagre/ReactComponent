@@ -1,15 +1,3 @@
-import React from 'react'
-
-const AdminDashboard = () => {
-  return (
-    <div>
-      <h1>Admin Dashboard</h1>
-    <article>
-        <span>role:Admin</span> <br />
-        <span>password:admin123</span> <br />
-    </article>
-    </div>
-  )
-}
-
-export default AdminDashboard
+export const AdminDashboard = () => <h2>Admin Dashboard</h2>;
+export const TeacherDashboard = () => <h2>Teacher Dashboard</h2>;
+export const StudentDashboard = () => <h2>Student Dashboard</h2>;

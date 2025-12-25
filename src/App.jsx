@@ -1,12 +1,63 @@
-import { useState } from "react";
-import { createRoot } from "react-dom/client";
-import UseEffectExample from "./hooks/UseEffectExample";
-import { TbCodeOff } from "react-icons/tb";
-import TODOExample from "./hooks/TODOExample";
-import UseReducerExample from "./hooks/UseReducerExample";
-import { useReducer } from 'react';
 
-import Score from "./hooks/UseReducerExample2";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
+import LoginPage from "./LoginPage";
+import { AdminDashboard, TeacherDashboard, StudentDashboard } from "./Dashboards";
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute allowedRoles={["Admin"]}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/teacher"
+            element={
+              <ProtectedRoute allowedRoles={["Teacher"]}>
+                <TeacherDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/student"
+            element={
+              <ProtectedRoute allowedRoles={["Student"]}>
+                <StudentDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route path="*" element={<LoginPage />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
+}
+
+export default App;
+
+// import { useState } from "react";
+// import { createRoot } from "react-dom/client";
+// import UseEffectExample from "./hooks/UseEffectExample";
+// import { TbCodeOff } from "react-icons/tb";
+// import TODOExample from "./hooks/TODOExample";
+// import UseReducerExample from "./hooks/UseReducerExample";
+// import { useReducer } from 'react';
+
+// import Score from "./hooks/UseReducerExample2";
 
 // const initialScore = [
 //   {
@@ -237,23 +288,23 @@ import Score from "./hooks/UseReducerExample2";
 //   );
 // };
 
-export default App;
+// export default App;
 
-const App = () => {
-  return (
-    <div>
-      {/* <h1>UseRef Example</h1> */}
-     {/* <UseCallBackHook/> */}
-     {/* <UseIDExample/> */}
-     {/* <UseEffectLayoutExample/> */}
-     {/* <UseEffectExample/> */}
-{/* <TODOExample/> */}
-{/* <UseReducerExample/> */}
-<CountCharacter/>
- {/* <Score/> */}
-    </div>
-  );
-};
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <h1>UseRef Example</h1> */}
+//      {/* <UseCallBackHook/> */}
+//      {/* <UseIDExample/> */}
+//      {/* <UseEffectLayoutExample/> */}
+//      {/* <UseEffectExample/> */}
+// {/* <TODOExample/> */}
+// {/* <UseReducerExample/> */}
+// <CountCharacter/>
+//  {/* <Score/> */}
+//     </div>
+//   );
+// };
 
 // export default App;
 
